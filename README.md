@@ -24,3 +24,7 @@ PowerShellでrealtime_i2i.pyを実行
 
 https://github.com/mattyamonaca/LCM_i2i_PoC/assets/48423148/69509251-286e-4c80-aaf1-bb1807749dd4
 
+# おまけ
+細かい仕組みや使い方はこちら
+https://zenn.dev/mattyamonaca/articles/3875b6e7f066d3
+
