@@ -11,6 +11,9 @@ LCM-LoRAを用いた高速i2iの検証用リポジトリ
 - pyautogui
 - diffusers
 - pyTorch
+- PIL
+- pynput
+- tkinter
 
 PowerShellでrealtime_i2i.pyを実行
 
