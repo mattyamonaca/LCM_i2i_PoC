@@ -15,7 +15,7 @@ git clone --branch test https://github.com/tori29umai0123/LCM_i2i_PoC.git<br>
 ```
 ②install.ps1を右クリック→PowerShellで実行（5分位かかります）<br>
 ③realtime_i2i.ps1を右クリック→PowerShellで実行<br>
-④各種設定してからキャプチャ開始ボタンをクリック。範囲設定後、画像が自動で生成される。
+④各種設定してからキャプチャ開始ボタンをクリック。範囲設定後、画像が自動で生成される。<br>
 ⑤『Window Capture』（生成画像が表示されるウインドウ）がアクティブ時、『P』キーを押すとクリップボードに画像が貼り付けられるので適宜使用してください。
 
 # 設定例
