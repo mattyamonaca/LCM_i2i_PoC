@@ -14,6 +14,7 @@ class ConfigWindow:
         self.master = master
         master.title("Configuration")
         master.geometry("400x500")  # ウィンドウサイズを設定
+        master.attributes("-topmost", True)  # ウィンドウサイズを最前列固定
         
 
         style = ttk.Style()
@@ -31,33 +32,49 @@ class ConfigWindow:
         self.generation_model_name = tk.StringVar(value="852wa/SDHK")
         ttk.Entry(master, textvariable=self.generation_model_name, width=30).grid(row=1, column=1, padx=10, pady=10)
 
+        # vaeモデルパス
+        ttk.Label(master, text="vaeモデルパス").grid(row=2, column=0, padx=10, pady=10, sticky="w")
+        self.vae_model_path = tk.StringVar()
+        ttk.Entry(master, textvariable=self.vae_model_path, width=30).grid(row=2, column=1, padx=10, pady=10)
+
+        # LoRAモデルパス
+        ttk.Label(master, text="LoRAモデルパス").grid(row=3, column=0, padx=10, pady=10, sticky="w")
+        self.LoRA_model_path = tk.StringVar()
+        ttk.Entry(master, textvariable=self.LoRA_model_path, width=30).grid(row=3, column=1, padx=10, pady=10)
+
+        # LoRAstrength
+        ttk.Label(master, text="LoRAstrength").grid(row=4, column=0, padx=10, pady=10, sticky="w")
+        self.LoRAstrength = tk.StringVar(value=1.0)
+        ttk.Entry(master, textvariable=self.LoRAstrength, width=30).grid(row=4, column=1, padx=10, pady=10)
+
         # プロンプト
-        ttk.Label(master, text="プロンプト").grid(row=2, column=0, padx=10, pady=10, sticky="w")
+        ttk.Label(master, text="プロンプト").grid(row=5, column=0, padx=10, pady=10, sticky="w")
         self.prompt = tk.StringVar()
-        ttk.Entry(master, textvariable=self.prompt, width=30).grid(row=2, column=1, padx=10, pady=10)
+        ttk.Entry(master, textvariable=self.prompt, width=30).grid(row=5, column=1, padx=10, pady=10)
 
         # strength
-        ttk.Label(master, text="strength").grid(row=3, column=0, padx=10, pady=10, sticky="w")
+        ttk.Label(master, text="strength").grid(row=6, column=0, padx=10, pady=10, sticky="w")
         self.strength = tk.StringVar(value=0.75)
-        ttk.Entry(master, textvariable=self.strength, width=30).grid(row=3, column=1, padx=10, pady=10)
+        ttk.Entry(master, textvariable=self.strength, width=30).grid(row=6, column=1, padx=10, pady=10)
  
         # num_inference_steps
-        ttk.Label(master, text="num_inference_steps").grid(row=4, column=0, padx=10, pady=10, sticky="w")
+        ttk.Label(master, text="num_inference_steps").grid(row=7, column=0, padx=10, pady=10, sticky="w")
         self.num_inference_steps = tk.StringVar(value=8)
-        ttk.Entry(master, textvariable=self.num_inference_steps, width=30).grid(row=4, column=1, padx=10, pady=10)
+        ttk.Entry(master, textvariable=self.num_inference_steps, width=30).grid(row=7, column=1, padx=10, pady=10)
  
 
         #画面キャプチャ
         capture_button = ttk.Button(master, text="キャプチャ開始", command=self.capture_screen)
-        capture_button.grid(row=5, column=0, columnspan=2, padx=10, pady=10, sticky="ew")
+        capture_button.grid(row=8, column=0, columnspan=2, padx=10, pady=10, sticky="ew")
 
         #パラメータ更新
         capture_button = ttk.Button(master, text="パラメータ更新", command=self.update_param)
-        capture_button.grid(row=6, column=0, columnspan=2, padx=10, pady=10, sticky="ew")
+        capture_button.grid(row=9, column=0, columnspan=2, padx=10, pady=10, sticky="ew")
 
     def update_param(self):
         self.num_inference_steps_value = int(self.num_inference_steps.get())
         self.strength_value = float(self.strength.get())
+        self.LoRAstrength_value = float(self.LoRAstrength.get())
 
 
     def capture_screen(self):
