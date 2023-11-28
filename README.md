@@ -11,7 +11,7 @@ CUDA Toolkit: [11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)<
 ①適当なディレクトリでリポジトリをgit clone<br>
 ```
 cd C:/
-git clone --branch test https://github.com/tori29umai0123/LCM_i2i_PoC.git<br>
+git clone --branch test https://github.com/tori29umai0123/LCM_i2i_PoC.git
 ```
 ②install.ps1を右クリック→PowerShellで実行（5分位かかります）<br>
 ③realtime_i2i.ps1を右クリック→PowerShellで実行<br>
