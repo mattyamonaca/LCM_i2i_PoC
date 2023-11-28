@@ -8,7 +8,7 @@ Python: [3.8.10](https://www.python.org/downloads/release/python-3810/) (3.10で
 CUDA Toolkit: [11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)<br>
 
 # 使い方
-①適当なディレクトリでリポジトリをgit clone<br>
+①コマンドプロンプトから適当なディレクトリでリポジトリをgit clone<br>
 ```
 cd C:/
 git clone --branch test https://github.com/tori29umai0123/LCM_i2i_PoC.git
